@@ -79,4 +79,8 @@
       </plugin>
     </plugins>
   </build>
+  <ciManagement>
+  	<system>UbuBamboo</system>
+  	<url>http://ububamboo.homenet:8085/</url>
+  </ciManagement>
 </project>
