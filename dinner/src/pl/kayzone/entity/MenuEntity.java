@@ -1,5 +1,6 @@
 package pl.kayzone.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.bson.types.ObjectId;
@@ -15,7 +16,7 @@ class MenuEntity {
 	
 	public MenuEntity() {
 		
-		
+		this.itemmenu = new ArrayList<String>();
 		
 	}
 
