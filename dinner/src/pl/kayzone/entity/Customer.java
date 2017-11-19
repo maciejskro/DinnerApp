@@ -17,6 +17,7 @@ public class Customer implements Serializable {
 	private String customerName;
 	private String customerSurname;
 	private String customerPass;
+	private String bankcount;
 	
 	public Customer() {
 		
@@ -52,6 +53,14 @@ public class Customer implements Serializable {
 
 	void setCustomerPass(String customerPass) {
 		this.customerPass = customerPass;
+	}
+
+	public String getBankcount() {
+		return bankcount;
+	}
+
+	public void setBankcount(String bankcount) {
+		this.bankcount = bankcount;
 	}
 
 }
