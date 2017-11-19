@@ -10,7 +10,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 
-class ObjectStorage<T> implements Serializable, ObjectStorageInterface<T> {
+public class ObjectStorage<T> implements Serializable, ObjectStorageInterface<T> {
 
 
 	private static final long serialVersionUID = 2535137648857930402L;
