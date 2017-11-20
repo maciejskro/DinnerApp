@@ -30,6 +30,7 @@ public class ObjectStorage<T> implements Serializable, ObjectStorageInterface<T>
 	public ObjectStorage(T ob) {
 		this();
 		setDs(morphia.createDatastore(mongo, ob.getClass().getName().toString()));
+		this.save(ob);
 	}
 	/*public getObjectStorage<T>  args) {
 		
@@ -37,6 +38,15 @@ public class ObjectStorage<T> implements Serializable, ObjectStorageInterface<T>
 		
 		return T;
 	} */
+	public void save(T ob) {
+		if(! ob.equals(null)) {
+			ds.save(ob);
+		}
+	}
+	@SuppressWarnings("unchecked")
+	public T getObject(String id) {
+		return (T) ds.createQuery(ob.getClass());
+	}
 	
 	public void set(T ob)  {
 		this.ob = ob;

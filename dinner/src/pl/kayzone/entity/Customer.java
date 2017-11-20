@@ -22,6 +22,16 @@ public class Customer implements Serializable {
 	public Customer() {
 		
 	}
+	
+	public Customer(String name, String surname , String pass , String bankaccount ) {
+		if (this.getId().equals(null) || this.getId().equals("")) {
+			this.setId(new ObjectId());
+		}
+		this.setCustomerName(name);
+		this.setCustomerSurname(surname);
+		this.setCustomerPass(pass);
+		this.setBankcount(bankaccount);
+	}
 
 	ObjectId getId() {
 		return id;
