@@ -7,7 +7,7 @@ import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 
 @Entity
-class MenuEntity {
+public class MenuEntity {
 
 	private ObjectId id;
 	private Integer weekid;

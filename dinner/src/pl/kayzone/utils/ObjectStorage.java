@@ -2,20 +2,17 @@ package pl.kayzone.utils;
 
 import java.io.Serializable;
 
-import org.bson.Document;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
-import com.mongodb.client.MongoCollection;
 
 public class ObjectStorage<T> implements Serializable, ObjectStorageInterface<T> {
 
 
 	private static final long serialVersionUID = 2535137648857930402L;
 	final private Morphia morphia; 
-	private MongoCollection<Document> mailcollection;
 	private Datastore ds;
 	private MongoClient mongo;
 	private T ob;
@@ -24,6 +21,7 @@ public class ObjectStorage<T> implements Serializable, ObjectStorageInterface<T>
 		// tu trzeba zrobić możliwość wyboru logowania do replicaset
 		MongoClientURI muri = new MongoClientURI("mongodb://localhost:27017");
 		mongo = new MongoClient(muri);
+		
 		//mailcollection = ds.getCollection();
 	}
 
@@ -32,12 +30,7 @@ public class ObjectStorage<T> implements Serializable, ObjectStorageInterface<T>
 		setDs(morphia.createDatastore(mongo, ob.getClass().getName().toString()));
 		this.save(ob);
 	}
-	/*public getObjectStorage<T>  args) {
-		
-		this.ds.getCollection( T );
-		
-		return T;
-	} */
+	
 	public void save(T ob) {
 		if(! ob.equals(null)) {
 			ds.save(ob);

@@ -41,27 +41,27 @@ public class Customer implements Serializable {
 		this.id = id;
 	}
 
-	String getCustomerName() {
+	public String getCustomerName() {
 		return customerName;
 	}
 
-	void setCustomerName(String customerName) {
+	public void setCustomerName(String customerName) {
 		this.customerName = customerName;
 	}
 
-	String getCustomerSurname() {
+	public String getCustomerSurname() {
 		return customerSurname;
 	}
 
-	void setCustomerSurname(String customerSurname) {
+	public void setCustomerSurname(String customerSurname) {
 		this.customerSurname = customerSurname;
 	}
 
-	String getCustomerPass() {
+	public String getCustomerPass() {
 		return customerPass;
 	}
 
-	void setCustomerPass(String customerPass) {
+	public void setCustomerPass(String customerPass) {
 		this.customerPass = customerPass;
 	}
 
