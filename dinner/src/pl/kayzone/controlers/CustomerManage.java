@@ -2,10 +2,15 @@ package pl.kayzone.controlers;
 
 import java.io.Serializable;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
 import pl.kayzone.entity.Customer;
 import pl.kayzone.utils.ObjectStorage;
 import pl.kayzone.utils.ObjectStorageInterface;
 
+@ManagedBean(name="customermanage")
+@SessionScoped
 public class CustomerManage implements Serializable, ObjectStorageInterface<Customer>  {
 
 	/**

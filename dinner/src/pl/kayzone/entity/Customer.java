@@ -20,11 +20,12 @@ public class Customer implements Serializable {
 	private String bankcount;
 	
 	public Customer() {
-		
+		this.id = new ObjectId();
 	}
 	
 	public Customer(String name, String surname , String pass , String bankaccount ) {
-		if (this.getId().equals(null) || this.getId().equals("")) {
+		this();
+		if (this.getId().equals(null) ) {
 			this.setId(new ObjectId());
 		}
 		this.setCustomerName(name);
